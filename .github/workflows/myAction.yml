@@ -22,5 +22,11 @@ jobs:
                   python -m pip install --upgrade pip
                   pip install -r requirements.txt
 
+            - name: Save output
+              uses: actions/upload-artifact@v2
+              with:
+                  name: output
+                  path: ./data
+
             - name: Run Python Script
               run: python main.py
