@@ -29,13 +29,4 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                   name: output
-                  path: ./data
-
-            - name: Download New CSV
-              run: |
-                if curl -o data/new-data.csv <replace_this_URL>; then
-                    echo "CSV download successful."
-                else
-                    echo "CSV download failed."
-                    exit 1
-                fi
+                  path: ./data/Superstore.csv
