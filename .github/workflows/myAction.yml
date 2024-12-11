@@ -1,0 +1,12 @@
+# GitHub Accion File to run a python script
+name: My Action
+on:
+    # Trigger the workflow manually from the Actions tab
+    workflow_dispatch:
+jobs:
+    Run-Python-Script:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Run Python Script
+              run: python main.py
