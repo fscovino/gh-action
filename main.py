@@ -6,7 +6,7 @@ df_final = df.iloc[:10, 0:4]
 
 # path = os.path.dirname(os.path.realpath(__file__))
 # df_final.to_csv(f'{path}/data/Superstore.csv', index=False)
-df_final.to_csv(f'/data/Superstore.csv', index=False)
+df_final.to_csv(f'{GITHUB_WORKSPACE}/data/Superstore.csv', index=False)
 
 print(f'Exporting to /data/Superstore.csv')
 print(df_final)
