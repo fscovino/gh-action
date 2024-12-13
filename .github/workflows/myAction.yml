@@ -15,6 +15,10 @@ jobs:
               with:
                   python-version: '3.x'
 
+            # see python installation folder
+            - name: Print Python location
+              run: which python
+
             - name: Install dependencies
               run: |
                   python -m pip install --upgrade pip
@@ -26,5 +30,11 @@ jobs:
             - name: Save output
               uses: actions/upload-artifact@v4
               with:
-                  name: output
-                  path: ./data/Superstore.csv
+                  name: output.csv
+                  path: ./data
+
+            - name: Download artifact
+              uses: actions/download-artifact@v4
+              with:
+                  name: output.csv  # use a different name and path
+                  path: ./data
