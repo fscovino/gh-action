@@ -18,6 +18,9 @@ jobs:
                   python -m pip install --upgrade pip
                   pip install -r requirements.txt
 
+            - name: Set GITHUB_WORKSPACE variable
+              run: echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+
             - name: Run Python Script
               run: python main.py
 
